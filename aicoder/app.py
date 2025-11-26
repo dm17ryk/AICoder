@@ -1,8 +1,15 @@
 # aicoder/app.py
-from textual.app import App, ComposeResult
-from textual.widgets import Header, Footer, Input, TextLog, Tree, Static
-from textual.containers import Horizontal, Vertical
 from pathlib import Path
+import sys
+
+from textual.app import App, ComposeResult
+from textual.containers import Horizontal, Vertical
+from textual.widgets import Footer, Header, Input, Log, Static, Tree
+
+# Ensure package imports work when running as a script (python aicoder/app.py)
+CURRENT_DIR = Path(__file__).resolve().parent
+if str(CURRENT_DIR.parent) not in sys.path:
+    sys.path.insert(0, str(CURRENT_DIR.parent))
 
 from aicoder.core.agent import Agent
 from aicoder.core.workspace import Workspace
@@ -30,9 +37,9 @@ class AICoderApp(App):
 
             # Правая колонка: чат и лог
             with Vertical():
-                self.chat_log = TextLog(id="chat_log")
+                self.chat_log = Log(id="chat_log")
                 self.chat_input = Input(placeholder="Ask AICoder…", id="chat_input")
-                self.actions_log = TextLog(id="actions_log")
+                self.actions_log = Log(id="actions_log")
 
                 yield Static("Chat", classes="title")
                 yield self.chat_log
@@ -45,10 +52,10 @@ class AICoderApp(App):
     async def on_mount(self) -> None:
         # Заполняем дерево файлов
         self._build_file_tree(self.workspace.root, self.file_tree.root)
-        await self.file_tree.expand_all()
+        self.file_tree.root.expand_all()
 
         # Фокус на инпут
-        await self.set_focus(self.chat_input)
+        self.set_focus(self.chat_input)
 
     def _build_file_tree(self, path: Path, node) -> None:
         for child in sorted(path.iterdir()):

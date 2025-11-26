@@ -1,0 +1,37 @@
+{
+  "task": "Run AICoder app and fix errors",
+  "priority": "high",
+  "goals": [
+    "Run the AICoder TUI app using 'python aicoder/app.py'",
+    "Capture any ImportError, AttributeError, or runtime tracebacks",
+    "Identify missing or deprecated symbols, especially from textual.widgets",
+    "Fix the code to match current Textual version APIs and ensure app starts",
+    "If widgets are missing (e.g., TextLog), replace with alternatives like Log or remove temporarily",
+    "Print final result: success or full traceback if still failing"
+  ],
+  "steps": [
+    {
+      "type": "shell",
+      "command": "python aicoder/app.py",
+      "capture_output": true
+    },
+    {
+      "type": "if_error",
+      "pattern": "ImportError|AttributeError|ModuleNotFoundError|Traceback",
+      "actions": [
+        {
+          "type": "search_and_fix_code",
+          "description": "Fix imports in app.py or other modules, especially related to 'textual.widgets'"
+        },
+        {
+          "type": "retry_shell",
+          "command": "python aicoder/app.py"
+        }
+      ]
+    }
+  ],
+  "modes": {
+    "auto_fix": true,
+    "verbose": true
+  }
+}

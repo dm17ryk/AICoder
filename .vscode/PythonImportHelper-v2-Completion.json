@@ -195,15 +195,6 @@
         "documentation": {}
     },
     {
-        "label": "openai",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "openai",
-        "description": "openai",
-        "detail": "openai",
-        "documentation": {}
-    },
-    {
         "label": "API_KEY",
         "importPath": "aicoder.config",
         "description": "aicoder.config",
@@ -245,7 +236,23 @@
         "documentation": {}
     },
     {
-        "label": "Header",
+        "label": "Horizontal",
+        "importPath": "textual.containers",
+        "description": "textual.containers",
+        "isExtraImport": true,
+        "detail": "textual.containers",
+        "documentation": {}
+    },
+    {
+        "label": "Vertical",
+        "importPath": "textual.containers",
+        "description": "textual.containers",
+        "isExtraImport": true,
+        "detail": "textual.containers",
+        "documentation": {}
+    },
+    {
+        "label": "Footer",
         "importPath": "textual.widgets",
         "description": "textual.widgets",
         "isExtraImport": true,
@@ -253,7 +260,7 @@
         "documentation": {}
     },
     {
-        "label": "Footer",
+        "label": "Header",
         "importPath": "textual.widgets",
         "description": "textual.widgets",
         "isExtraImport": true,
@@ -269,15 +276,7 @@
         "documentation": {}
     },
     {
-        "label": "TextLog",
-        "importPath": "textual.widgets",
-        "description": "textual.widgets",
-        "isExtraImport": true,
-        "detail": "textual.widgets",
-        "documentation": {}
-    },
-    {
-        "label": "Tree",
+        "label": "Log",
         "importPath": "textual.widgets",
         "description": "textual.widgets",
         "isExtraImport": true,
@@ -293,19 +292,11 @@
         "documentation": {}
     },
     {
-        "label": "Horizontal",
-        "importPath": "textual.containers",
-        "description": "textual.containers",
+        "label": "Tree",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
         "isExtraImport": true,
-        "detail": "textual.containers",
-        "documentation": {}
-    },
-    {
-        "label": "Vertical",
-        "importPath": "textual.containers",
-        "description": "textual.containers",
-        "isExtraImport": true,
-        "detail": "textual.containers",
+        "detail": "textual.widgets",
         "documentation": {}
     },
     {
@@ -483,7 +474,7 @@
         "kind": 6,
         "importPath": "aicoder.llm.client",
         "description": "aicoder.llm.client",
-        "peekOfCode": "class LLMClient:\n    def __init__(self):\n        openai.api_key = API_KEY\n    async def chat(self, prompt: str) -> str:\n        response = openai.ChatCompletion.create(\n            model=MODEL_NAME,\n            messages=[{'role': 'user', 'content': prompt}]\n        )\n        return response.choices[0].message['content']",
+        "peekOfCode": "class LLMClient:\n    def __init__(self):\n        if openai is not None:\n            openai.api_key = API_KEY\n    async def chat(self, prompt: str) -> str:\n        \"\"\"Send a prompt to the LLM; returns a placeholder if the SDK is missing.\"\"\"\n        if openai is None:\n            return \"OpenAI SDK not installed. Install `pip install openai` or plug in a client.\"\n        response = openai.ChatCompletion.create(\n            model=MODEL_NAME,",
         "detail": "aicoder.llm.client",
         "documentation": {}
     },
@@ -556,6 +547,15 @@
         "importPath": "aicoder.app",
         "description": "aicoder.app",
         "peekOfCode": "class AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [\n        (\"ctrl+c\", \"quit\", \"Quit\"),\n        (\"f5\", \"run_agent\", \"Run agent on last prompt\"),\n    ]\n    def __init__(self, project_path: str | None = None, **kwargs):\n        super().__init__(**kwargs)\n        self.workspace = Workspace(Path(project_path or \".\").resolve())\n        self.agent = Agent(self.workspace)",
+        "detail": "aicoder.app",
+        "documentation": {}
+    },
+    {
+        "label": "CURRENT_DIR",
+        "kind": 5,
+        "importPath": "aicoder.app",
+        "description": "aicoder.app",
+        "peekOfCode": "CURRENT_DIR = Path(__file__).resolve().parent\nif str(CURRENT_DIR.parent) not in sys.path:\n    sys.path.insert(0, str(CURRENT_DIR.parent))\nfrom aicoder.core.agent import Agent\nfrom aicoder.core.workspace import Workspace\nclass AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [\n        (\"ctrl+c\", \"quit\", \"Quit\"),\n        (\"f5\", \"run_agent\", \"Run agent on last prompt\"),",
         "detail": "aicoder.app",
         "documentation": {}
     },
