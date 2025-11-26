@@ -35,6 +35,102 @@
         "documentation": {}
     },
     {
+        "label": "LLMClient",
+        "importPath": "aicoder.llm.client",
+        "description": "aicoder.llm.client",
+        "isExtraImport": true,
+        "detail": "aicoder.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "LLMClient",
+        "importPath": "aicoder.llm.client",
+        "description": "aicoder.llm.client",
+        "isExtraImport": true,
+        "detail": "aicoder.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "isExtraImport": true,
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "isExtraImport": true,
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "isExtraImport": true,
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "isExtraImport": true,
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "isExtraImport": true,
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "run_command",
+        "importPath": "aicoder.mcp_tools.shell",
+        "description": "aicoder.mcp_tools.shell",
+        "isExtraImport": true,
+        "detail": "aicoder.mcp_tools.shell",
+        "documentation": {}
+    },
+    {
         "label": "dataclass",
         "importPath": "dataclasses",
         "description": "dataclasses",
@@ -51,27 +147,19 @@
         "documentation": {}
     },
     {
-        "label": "Workspace",
-        "importPath": "aicoder.core.workspace",
-        "description": "aicoder.core.workspace",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "aicoder.core.workspace",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
-        "label": "Workspace",
-        "importPath": "aicoder.core.workspace",
-        "description": "aicoder.core.workspace",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "aicoder.core.workspace",
-        "documentation": {}
-    },
-    {
-        "label": "LLMClient",
-        "importPath": "aicoder.llm.client",
-        "description": "aicoder.llm.client",
-        "isExtraImport": true,
-        "detail": "aicoder.llm.client",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -310,6 +398,60 @@
         "documentation": {}
     },
     {
+        "label": "BaseAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.base",
+        "description": "aicoder.agents.base",
+        "peekOfCode": "class BaseAgent:\n    \"\"\"Base class providing workspace access and a shared LLM client.\"\"\"\n    def __init__(self, workspace: Workspace):\n        self.workspace = workspace\n        self.llm = LLMClient()\n    async def run(self, user_message: str) -> str:\n        \"\"\"Execute agent logic; to be implemented by subclasses.\"\"\"\n        raise NotImplementedError(\"Subclasses must implement the run method\")",
+        "detail": "aicoder.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "BuilderAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.builder",
+        "description": "aicoder.agents.builder",
+        "peekOfCode": "class BuilderAgent(BaseAgent):\n    \"\"\"Agent that generates new or updated code based on the user's request.\"\"\"\n    async def run(self, user_message: str) -> str:\n        prompt = build_prompt(\"builder\", user_message, self.workspace)\n        code_suggestion = await self.llm.chat(prompt)\n        return code_suggestion",
+        "detail": "aicoder.agents.builder",
+        "documentation": {}
+    },
+    {
+        "label": "DebuggerAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.debugger",
+        "description": "aicoder.agents.debugger",
+        "peekOfCode": "class DebuggerAgent(BaseAgent):\n    \"\"\"Agent that identifies bugs or issues from code and error context.\"\"\"\n    async def run(self, user_message: str) -> str:\n        prompt = build_prompt(\"debugger\", user_message, self.workspace)\n        analysis = await self.llm.chat(prompt)\n        return analysis",
+        "detail": "aicoder.agents.debugger",
+        "documentation": {}
+    },
+    {
+        "label": "FixerAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.fixer",
+        "description": "aicoder.agents.fixer",
+        "peekOfCode": "class FixerAgent(BaseAgent):\n    \"\"\"Agent that fixes code issues or applies necessary changes.\"\"\"\n    async def run(self, user_message: str) -> str:\n        prompt = build_prompt(\"fixer\", user_message, self.workspace)\n        solution = await self.llm.chat(prompt)\n        return solution",
+        "detail": "aicoder.agents.fixer",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewerAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.reviewer",
+        "description": "aicoder.agents.reviewer",
+        "peekOfCode": "class ReviewerAgent(BaseAgent):\n    \"\"\"Agent that reviews code for quality and correctness.\"\"\"\n    async def run(self, user_message: str) -> str:\n        prompt = build_prompt(\"reviewer\", user_message, self.workspace)\n        feedback = await self.llm.chat(prompt)\n        return feedback",
+        "detail": "aicoder.agents.reviewer",
+        "documentation": {}
+    },
+    {
+        "label": "TesterAgent",
+        "kind": 6,
+        "importPath": "aicoder.agents.tester",
+        "description": "aicoder.agents.tester",
+        "peekOfCode": "class TesterAgent(BaseAgent):\n    \"\"\"Agent that validates code by running tests or generating test cases.\"\"\"\n    async def run(self, user_message: str) -> str:\n        prompt = build_prompt(\"tester\", user_message, self.workspace)\n        _ = await self.llm.chat(prompt)\n        code, out, err = run_command(\"pytest\", self.workspace.root)\n        result = out + err\n        if code != 0:\n            return f\"Tests failed (exit {code}):\\n{result}\"\n        return f\"Tests passed (exit {code}):\\n{result}\"",
+        "detail": "aicoder.agents.tester",
+        "documentation": {}
+    },
+    {
         "label": "AgentStep",
         "kind": 6,
         "importPath": "aicoder.core.agent",
@@ -343,6 +485,51 @@
         "description": "aicoder.llm.client",
         "peekOfCode": "class LLMClient:\n    def __init__(self):\n        openai.api_key = API_KEY\n    async def chat(self, prompt: str) -> str:\n        response = openai.ChatCompletion.create(\n            model=MODEL_NAME,\n            messages=[{'role': 'user', 'content': prompt}]\n        )\n        return response.choices[0].message['content']",
         "detail": "aicoder.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "run_command",
+        "kind": 2,
+        "importPath": "aicoder.mcp_tools.shell",
+        "description": "aicoder.mcp_tools.shell",
+        "peekOfCode": "def run_command(cmd: str, cwd: Path) -> tuple[int, str, str]:\n    \"\"\"Execute a shell command in the given working directory. Returns (exit_code, stdout, stderr).\"\"\"\n    proc = subprocess.Popen(\n        cmd, cwd=str(cwd), shell=True,\n        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True\n    )\n    out, err = proc.communicate()\n    return proc.returncode, out, err",
+        "detail": "aicoder.mcp_tools.shell",
+        "documentation": {}
+    },
+    {
+        "label": "load_prompt_template",
+        "kind": 2,
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "peekOfCode": "def load_prompt_template(name: str) -> str:\n    \"\"\"Load the prompt template text for the given role (or 'base').\"\"\"\n    path = TEMPLATES_DIR / f\"{name}.txt\"\n    if not path.exists():\n        return \"\"\n    return path.read_text(encoding=\"utf-8\")\ndef build_prompt(role: str, user_message: str, workspace: Workspace) -> str:\n    \"\"\"Construct a prompt by combining base, role-specific instructions, and project context.\"\"\"\n    base_prompt = load_prompt_template(\"base\")\n    role_prompt = load_prompt_template(role)",
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_prompt",
+        "kind": 2,
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "peekOfCode": "def build_prompt(role: str, user_message: str, workspace: Workspace) -> str:\n    \"\"\"Construct a prompt by combining base, role-specific instructions, and project context.\"\"\"\n    base_prompt = load_prompt_template(\"base\")\n    role_prompt = load_prompt_template(role)\n    context_info = build_context(workspace)\n    prompt_parts: list[str] = []\n    if base_prompt:\n        prompt_parts.append(base_prompt.strip())\n    if role_prompt:\n        prompt_parts.append(role_prompt.strip())",
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "build_context",
+        "kind": 2,
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "peekOfCode": "def build_context(workspace: Workspace) -> str:\n    \"\"\"Return lightweight project context (top-level files).\"\"\"\n    try:\n        files = [str(p.relative_to(workspace.root)) for p in workspace.root.iterdir() if p.is_file()]\n    except Exception:\n        files = []\n    if not files:\n        return \"\"\n    return \"Project files:\\n\" + \"\\n\".join(files)",
+        "detail": "aicoder.prompts.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES_DIR",
+        "kind": 5,
+        "importPath": "aicoder.prompts.utils",
+        "description": "aicoder.prompts.utils",
+        "peekOfCode": "TEMPLATES_DIR = Path(__file__).parent\ndef load_prompt_template(name: str) -> str:\n    \"\"\"Load the prompt template text for the given role (or 'base').\"\"\"\n    path = TEMPLATES_DIR / f\"{name}.txt\"\n    if not path.exists():\n        return \"\"\n    return path.read_text(encoding=\"utf-8\")\ndef build_prompt(role: str, user_message: str, workspace: Workspace) -> str:\n    \"\"\"Construct a prompt by combining base, role-specific instructions, and project context.\"\"\"\n    base_prompt = load_prompt_template(\"base\")",
+        "detail": "aicoder.prompts.utils",
         "documentation": {}
     },
     {

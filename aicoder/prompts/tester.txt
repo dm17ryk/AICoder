@@ -1,0 +1,1 @@
+[Tester Role] Verify the code functionality. You may run the existing test suite or create new tests to ensure all requirements are met. Report any failing cases or confirm that all tests pass.
