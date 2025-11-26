@@ -1,0 +1,402 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncIterator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "isExtraImport": true,
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "LLMClient",
+        "importPath": "aicoder.llm.client",
+        "description": "aicoder.llm.client",
+        "isExtraImport": true,
+        "detail": "aicoder.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "importPath": "aicoder.config",
+        "description": "aicoder.config",
+        "isExtraImport": true,
+        "detail": "aicoder.config",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_NAME",
+        "importPath": "aicoder.config",
+        "description": "aicoder.config",
+        "isExtraImport": true,
+        "detail": "aicoder.config",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "App",
+        "importPath": "textual.app",
+        "description": "textual.app",
+        "isExtraImport": true,
+        "detail": "textual.app",
+        "documentation": {}
+    },
+    {
+        "label": "ComposeResult",
+        "importPath": "textual.app",
+        "description": "textual.app",
+        "isExtraImport": true,
+        "detail": "textual.app",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Footer",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Input",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "TextLog",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Tree",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Static",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Horizontal",
+        "importPath": "textual.containers",
+        "description": "textual.containers",
+        "isExtraImport": true,
+        "detail": "textual.containers",
+        "documentation": {}
+    },
+    {
+        "label": "Vertical",
+        "importPath": "textual.containers",
+        "description": "textual.containers",
+        "isExtraImport": true,
+        "detail": "textual.containers",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "importPath": "aicoder.core.agent",
+        "description": "aicoder.core.agent",
+        "isExtraImport": true,
+        "detail": "aicoder.core.agent",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in '../lib/python3.14/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "AgentStep",
+        "kind": 6,
+        "importPath": "aicoder.core.agent",
+        "description": "aicoder.core.agent",
+        "peekOfCode": "class AgentStep:\n    type: str  # \"llm\" | \"command\" | \"command_result\"\n    text: str | None = None\n    command: str | None = None\n    output: str | None = None\nclass Agent:\n    def __init__(self, workspace: Workspace):\n        self.workspace = workspace\n        self.llm = LLMClient()\n    async def handle_user_message(self, text: str) -> AsyncIterator[AgentStep]:",
+        "detail": "aicoder.core.agent",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "kind": 6,
+        "importPath": "aicoder.core.agent",
+        "description": "aicoder.core.agent",
+        "peekOfCode": "class Agent:\n    def __init__(self, workspace: Workspace):\n        self.workspace = workspace\n        self.llm = LLMClient()\n    async def handle_user_message(self, text: str) -> AsyncIterator[AgentStep]:\n        # Пока без сложного планирования: просто шлём в LLM\n        # Позже сюда добавятся tools, chain-of-thought и т.д.\n        prompt = self._build_prompt(text)\n        response = await self.llm.chat(prompt)\n        yield AgentStep(type=\"llm\", text=response)",
+        "detail": "aicoder.core.agent",
+        "documentation": {}
+    },
+    {
+        "label": "Workspace",
+        "kind": 6,
+        "importPath": "aicoder.core.workspace",
+        "description": "aicoder.core.workspace",
+        "peekOfCode": "class Workspace:\n    def __init__(self, root: Path):\n        self.root = root\n    def read_file(self, relative: str) -> str:\n        path = self.root / relative\n        return path.read_text(encoding=\"utf-8\")\n    def write_file(self, relative: str, content: str) -> None:\n        path = self.root / relative\n        path.write_text(content, encoding=\"utf-8\")",
+        "detail": "aicoder.core.workspace",
+        "documentation": {}
+    },
+    {
+        "label": "LLMClient",
+        "kind": 6,
+        "importPath": "aicoder.llm.client",
+        "description": "aicoder.llm.client",
+        "peekOfCode": "class LLMClient:\n    def __init__(self):\n        openai.api_key = API_KEY\n    async def chat(self, prompt: str) -> str:\n        response = openai.ChatCompletion.create(\n            model=MODEL_NAME,\n            messages=[{'role': 'user', 'content': prompt}]\n        )\n        return response.choices[0].message['content']",
+        "detail": "aicoder.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "git_status",
+        "kind": 2,
+        "importPath": "aicoder.tools.gittools",
+        "description": "aicoder.tools.gittools",
+        "peekOfCode": "def git_status(cwd: Path):\n    return subprocess.check_output(['git', 'status'], cwd=str(cwd), text=True)",
+        "detail": "aicoder.tools.gittools",
+        "documentation": {}
+    },
+    {
+        "label": "run_command",
+        "kind": 2,
+        "importPath": "aicoder.tools.shell",
+        "description": "aicoder.tools.shell",
+        "peekOfCode": "def run_command(cmd: str, cwd: Path) -> tuple[int, str, str]:\n    proc = subprocess.Popen(\n        cmd,\n        cwd=str(cwd),\n        shell=True,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        text=True,\n    )\n    out, err = proc.communicate()",
+        "detail": "aicoder.tools.shell",
+        "documentation": {}
+    },
+    {
+        "label": "AICoderApp",
+        "kind": 6,
+        "importPath": "aicoder.app",
+        "description": "aicoder.app",
+        "peekOfCode": "class AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [\n        (\"ctrl+c\", \"quit\", \"Quit\"),\n        (\"f5\", \"run_agent\", \"Run agent on last prompt\"),\n    ]\n    def __init__(self, project_path: str | None = None, **kwargs):\n        super().__init__(**kwargs)\n        self.workspace = Workspace(Path(project_path or \".\").resolve())\n        self.agent = Agent(self.workspace)",
+        "detail": "aicoder.app",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "aicoder.config",
+        "description": "aicoder.config",
+        "peekOfCode": "API_KEY = ''\nMODEL_NAME = 'gpt-4.1'\nDEFAULT_PROJECT = '.'",
+        "detail": "aicoder.config",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_NAME",
+        "kind": 5,
+        "importPath": "aicoder.config",
+        "description": "aicoder.config",
+        "peekOfCode": "MODEL_NAME = 'gpt-4.1'\nDEFAULT_PROJECT = '.'",
+        "detail": "aicoder.config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_PROJECT",
+        "kind": 5,
+        "importPath": "aicoder.config",
+        "description": "aicoder.config",
+        "peekOfCode": "DEFAULT_PROJECT = '.'",
+        "detail": "aicoder.config",
+        "documentation": {}
+    }
+]
