@@ -1,1 +1,61 @@
-/* Placeholder styles for AICoder TUI */
+Screen {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+#title_bar {
+    height: 1;
+    background: #2c3640;
+    padding: 0 1;
+}
+
+#title {
+    content-align: left middle;
+    text-style: bold;
+}
+
+.title-btn {
+    width: 3;
+    height: 1;
+    padding: 0 0;
+    content-align: center middle;
+    background: #3d4a57;
+    color: #e0e0e0;
+    border: none;
+}
+
+.title-btn.danger {
+    background: #7d2f2f;
+}
+
+#status_bar {
+    height: 1;
+    background: #2c3640;
+    padding: 0 1;
+}
+
+.pill {
+    height: 1;
+    padding: 0 1;
+    border: none;
+    background: #1e5678;
+    color: #e0e0e0;
+    text-style: bold;
+}
+
+.pill.danger {
+    background: #d28d21;
+    color: #111;
+}
+
+.pill:focus {
+    background: #2277aa;
+}
+
+Tree {
+    background: #1f1f1f;
+}
+
+Log, Input, Static {
+    background: #242424;
+}

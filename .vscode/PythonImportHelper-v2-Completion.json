@@ -220,6 +220,15 @@
         "documentation": {}
     },
     {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
         "label": "App",
         "importPath": "textual.app",
         "description": "textual.app",
@@ -268,6 +277,14 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "textual.widgets",
+        "description": "textual.widgets",
+        "isExtraImport": true,
+        "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
         "label": "Input",
         "importPath": "textual.widgets",
         "description": "textual.widgets",
@@ -297,6 +314,38 @@
         "description": "textual.widgets",
         "isExtraImport": true,
         "detail": "textual.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Binding",
+        "importPath": "textual.binding",
+        "description": "textual.binding",
+        "isExtraImport": true,
+        "detail": "textual.binding",
+        "documentation": {}
+    },
+    {
+        "label": "BindingsMap",
+        "importPath": "textual.binding",
+        "description": "textual.binding",
+        "isExtraImport": true,
+        "detail": "textual.binding",
+        "documentation": {}
+    },
+    {
+        "label": "BindingType",
+        "importPath": "textual.binding",
+        "description": "textual.binding",
+        "isExtraImport": true,
+        "detail": "textual.binding",
+        "documentation": {}
+    },
+    {
+        "label": "Keymap",
+        "importPath": "textual.binding",
+        "description": "textual.binding",
+        "isExtraImport": true,
+        "detail": "textual.binding",
         "documentation": {}
     },
     {
@@ -546,7 +595,7 @@
         "kind": 6,
         "importPath": "aicoder.app",
         "description": "aicoder.app",
-        "peekOfCode": "class AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [\n        (\"ctrl+c\", \"quit\", \"Quit\"),\n        (\"f5\", \"run_agent\", \"Run agent on last prompt\"),\n    ]\n    def __init__(self, project_path: str | None = None, **kwargs):\n        super().__init__(**kwargs)\n        self.workspace = Workspace(Path(project_path or \".\").resolve())\n        self.agent = Agent(self.workspace)",
+        "peekOfCode": "class AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [ # Disable default 'q' binding\n        Binding(\n            \"ctrl+q\",\n            \"quit\",\n            \"Quit\",\n            tooltip=\"Quit the app and return to the command prompt.\",\n            show=True,\n            priority=True,",
         "detail": "aicoder.app",
         "documentation": {}
     },
@@ -555,7 +604,7 @@
         "kind": 5,
         "importPath": "aicoder.app",
         "description": "aicoder.app",
-        "peekOfCode": "CURRENT_DIR = Path(__file__).resolve().parent\nif str(CURRENT_DIR.parent) not in sys.path:\n    sys.path.insert(0, str(CURRENT_DIR.parent))\nfrom aicoder.core.agent import Agent\nfrom aicoder.core.workspace import Workspace\nclass AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [\n        (\"ctrl+c\", \"quit\", \"Quit\"),\n        (\"f5\", \"run_agent\", \"Run agent on last prompt\"),",
+        "peekOfCode": "CURRENT_DIR = Path(__file__).resolve().parent\nif str(CURRENT_DIR.parent) not in sys.path:\n    sys.path.insert(0, str(CURRENT_DIR.parent))\nfrom aicoder.core.agent import Agent\nfrom aicoder.core.workspace import Workspace\nclass AICoderApp(App):\n    CSS_PATH = \"aicoder.css\"\n    BINDINGS = [ # Disable default 'q' binding\n        Binding(\n            \"ctrl+q\",",
         "detail": "aicoder.app",
         "documentation": {}
     },

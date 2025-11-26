@@ -7,6 +7,9 @@
     "Identify missing or deprecated symbols, especially from textual.widgets",
     "Fix the code to match current Textual version APIs and ensure app starts",
     "If widgets are missing (e.g., TextLog), replace with alternatives like Log or remove temporarily",
+    "Test newly added or modified code to ensure no further errors",
+    "Check app look and functionality after fixes",
+    "Check app look compared to previous version before changes",
     "Print final result: success or full traceback if still failing"
   ],
   "steps": [
@@ -32,6 +35,7 @@
   ],
   "modes": {
     "auto_fix": true,
+    "debug": true,
     "verbose": true
   }
 }
